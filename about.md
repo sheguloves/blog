@@ -4,12 +4,9 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
-
-### More Information
-
-A place to include any other types of information that you'd like to include about yourself.
+席国峰，2008年毕业于中国石油大学(北京)，目前上海。热爱web前端，node.js等相关技术，喜欢看电影。
+邮箱： sheguloves@hotmail.com
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[sheguloves@hotmail.com](mailto:sheguloves@hotmail.com)
