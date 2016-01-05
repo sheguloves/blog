@@ -13,14 +13,12 @@
         <h1 class="project-name">{{ site.name }}</h1>
         <h2 class="project-tagline">{{ site.description }}</h2>
         <a href="https://github.com/sheguloves/sheguloves.github.io/" class="btn">View on GitHub</a>
-        <a href="https://github.com/sheguloves/sheguloves.github.io/zipball/master" class="btn">Download .zip</a>
-        <a href="https://github.com/sheguloves/sheguloves.github.io/tarball/master" class="btn">Download .tar.gz</a>
-        <a href="{{ site.baseurl }}/">Blog</a>
-        <a href="{{ site.baseurl }}/about">About</a>
+        <a href="{{ site.baseurl }}/" class="btn">Blog</a>
+        <a href="{{ site.baseurl }}/about" class="btn">About</a>
     </section>
 
-    <section>
-        <div id="main" role="main" class="container">
+    <section class="main-content">
+        <div>
             {{ content }}
         </div>
         {% include footer.html %}
