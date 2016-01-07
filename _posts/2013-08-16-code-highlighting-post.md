@@ -26,6 +26,8 @@ To modify styling and highlight colors edit `/_sass/_pygments.scss`.
 }
 {% endhighlight %}
 
+<!--more-->
+
 {% highlight html %}
 {% raw %}
 <nav class="pagination" role="navigation">

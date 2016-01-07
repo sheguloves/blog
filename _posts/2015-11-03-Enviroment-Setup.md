@@ -13,6 +13,8 @@ git config --global http.proxy http://<host>:<port>
 git config --global https.proxy http://<host>:<port>
 {% endhighlight %}
 
+<!--more-->
+
 ### npm proxy
 
 {% highlight ruby %}

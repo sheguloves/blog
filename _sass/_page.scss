@@ -218,6 +218,7 @@ body {
 
 article .entry-meta {
     @include font-rem(14);
+    color: lighten($base-color, 10);
 }
 
 header .entry-meta {
