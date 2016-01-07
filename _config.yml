@@ -1,6 +1,6 @@
 title:            Felix Blog
 description:      This is a tech blog which record all tech issues and tech articles.
-disqus_shortname: sheguloves_post
+disqus_shortname: sheguloves
 reading_time:     true
 words_per_minute: 200
 # Your site's domain goes here (eg: //mmistakes.github.io, http://mademistakes.com, etc)
@@ -25,6 +25,8 @@ owner:
 
 # Background image to be tiled on all pages
 background: 
+
+shart: false
 
 # Analytics and webmaster tools stuff goes here
 google_analytics:   
