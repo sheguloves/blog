@@ -3,7 +3,7 @@ layout: post
 title: Environment Setup
 description: "This is a notes for development environment setup"
 modified: 2015-11-08
-tags: [CSS]
+tags: [environment]
 ---
 
 ### Config git proxy
