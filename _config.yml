@@ -28,6 +28,8 @@ background:
 
 shart: false
 
+excerpt_separator: <!--more-->
+
 # Analytics and webmaster tools stuff goes here
 google_analytics:   
 google_verify:      
