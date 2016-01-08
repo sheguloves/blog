@@ -8,7 +8,7 @@ tags: [environment]
 
 ### Config git proxy
 
-{% highlight ruby %}
+{% highlight Bash shell scripts %}
 git config --global http.proxy http://<host>:<port>
 git config --global https.proxy http://<host>:<port>
 {% endhighlight %}
@@ -17,7 +17,7 @@ git config --global https.proxy http://<host>:<port>
 
 ### npm proxy
 
-{% highlight ruby %}
+{% highlight Bash shell scripts %}
 npm config set proxy http://<host>:<port>,
 npm config set https-proxy http://<host>:<port>
 {% endhighlight %}
@@ -25,7 +25,7 @@ npm config set https-proxy http://<host>:<port>
 ### bower proxy
 
 edit .bowerrc file and add the following code
-{% highlight ruby %}
+{% highlight Bash shell scripts %}
 {
   ...
   "proxy":"http://<user>:<password>@<host>:<port>", // "proxy":"http://<host>:<port>",
