@@ -9,7 +9,7 @@ tags: [Javascript, Java, Image Byte]
 
 ### Javascript
 
-```
+{% highlight javascript %}
 
 var $ = require("jquery");
 
@@ -24,11 +24,13 @@ $.ajax({
     }
 });
 
-```
+{% endhighlight %}
+
+<--more-->
 
 ### Java servlet
 
-```
+{% highlight java %}
 
 import org.apache.commons.codec.binary.Base64;
 
@@ -38,4 +40,4 @@ httpResponse.getWriter().println(new String(encodedBytes));
 httpResponse.getWriter().flush();
 httpResponse.getWriter().close();
 
-```
+{% endhighlight %}
