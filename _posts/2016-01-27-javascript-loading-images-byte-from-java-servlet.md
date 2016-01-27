@@ -26,7 +26,7 @@ $.ajax({
 
 {% endhighlight %}
 
-<--more-->
+<!--more-->
 
 ### Java servlet
 
