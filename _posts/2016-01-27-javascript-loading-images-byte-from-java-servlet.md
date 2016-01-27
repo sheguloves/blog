@@ -2,6 +2,7 @@
 layout: post
 title: Javascript use byte images from java servlet
 description: "Javascript use byte images from java servlet"
+modified: 2016-01-27
 tags: [Javascript, Java, Image Byte]
 ---
 
