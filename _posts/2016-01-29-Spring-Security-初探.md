@@ -126,7 +126,10 @@ ok，以上就是代码部分，现在聊聊设计部分。
 再来说说上面提到的 AuthenticationEntryPoint，我为什么说我们当前的工程部需要这部分的改动呢，是因为我们当前的改动并没有把 Spring Security 改成是一个完完全全的 RESTful API，如果用户发了 request，但是并没有登陆过，我们就通过 Spring Security 默认的规则，让页面定位到登陆页面。不过 AuthenticationEntryPoint 是不是完成我说的这个功能，这仅仅是我的猜想，有待验证。所以从上面我给出的代码可以看出，我们当前的项目实际上不是一个 SPA，而是一个 Login 页面 + SPA, 为什么要这么设计，首先，登陆界面负责验证，通过后会跳转到相应的页面，从上面代码看到，我们项目要跟据当前的 device 定位到不同的 page，为什么要这么做，是因为以前的东西现在还不能移掉，新的 SPA 是为移动端开发的，开发完成才会替换掉 pc 端的 jsp，就为实现这个东西，我才研究的 Spring Security。同时也是因为不想改变当前 request url 规则，前端人应该知道，不管是 Angular.js 还是 React.js，它们 route 的实现都是基于 window.location.hash，而 hash 的值都是在 `#/`，而我们当前的 url 完全不包含 `#/`,所以才没办法将 mobile 端整个合并在一起，不过貌似可以把网站的 root 直接设为 `#`，只是看到有人说，未曾试过。
 
 再说新的发现
-参考链接 [Spring Security and Angular JS](https://spring.io/guides/tutorials/spring-security-and-angular-js/#add-a-home-page) 这篇文章讲了一下 SPA 如何跟 Spring Security 集成到一起，只看了个开头，注意到下面的code
+
+参考链接 [Spring Security and Angular JS](https://spring.io/guides/tutorials/spring-security-and-angular-js/#add-a-home-page)
+
+这篇文章讲了一下 SPA 如何跟 Spring Security 集成到一起，只看了个开头，注意到下面的code
 
 {% highlight java %}
 if (csrf != null) {
