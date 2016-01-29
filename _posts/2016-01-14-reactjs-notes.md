@@ -15,10 +15,7 @@ tags: [react, webpack]
 - ReactDOM.render in document.body
 
   Error message: "Warning: render(): Rendering components directly into document.body is discouraged, since its children are often manipulated by third-party scripts and browser extensions. This may lead to subtle reconciliation issues. Try rendering into a container element created for your app."
-  Creat a new div like:
-`
-ReactDOM.render(<App />, document.getElementById("root"));
-`
+  Creat a new div like: `ReactDOM.render(<App />, document.getElementById("root"));`
 
 ### Webpack
 - Inline image
