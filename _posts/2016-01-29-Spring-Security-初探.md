@@ -14,8 +14,8 @@ tags: [spring security, SPA, Ajax, RESTful]
 
 ### Implementation
 
-* 将 Spring Security 的验证结果用像RESTful的方式返回，而不是让 Spring Security 自己 Redirect to 其他的 page
-  Spring Security 的默认行为是用户可以指定相应的 url 让 Spring Security 去实现自动跳转，但是如果我想自己写一个 login page，我希望通过 Ajax call 去调用 Spring Security 的 authentication，但是我不想让 Spring Security 帮我去跳转，我只想知道 Spring Security authentication 的结果是什么，换句话说就是让 Spring Security 将验证的结果返回给我，而不是返回给我一个 forward 的 web page。例如：Spring Security 默认的验证 url 为 `j_spring_security_check`，那么我可以通过下面的代码实现 Spring Security authentication:
+将 Spring Security 的验证结果用像RESTful的方式返回，而不是让 Spring Security 自己 Redirect to 其他的 page
+Spring Security 的默认行为是用户可以指定相应的 url 让 Spring Security 去实现自动跳转，但是如果我想自己写一个 login page，我希望通过 Ajax call 去调用 Spring Security 的 authentication，但是我不想让 Spring Security 帮我去跳转，我只想知道 Spring Security authentication 的结果是什么，换句话说就是让 Spring Security 将验证的结果返回给我，而不是返回给我一个 forward 的 web page。例如：Spring Security 默认的验证 url 为 `j_spring_security_check`，那么我可以通过下面的代码实现 Spring Security authentication:
 
 {% highlight javascript %}
 
