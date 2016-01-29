@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ReactJs & Webpack
+title: RESTful Spring Security for SPA? No really
 description: "This is a notes for ReactJs"
 modified: 2016-01-29
 tags: [spring security, SPA, Ajax, RESTful]
@@ -15,7 +15,7 @@ tags: [spring security, SPA, Ajax, RESTful]
 ### Implementation
 
 * 将 Spring Security 的验证结果用像RESTful的方式返回，而不是让 Spring Security 自己 Redirect to 其他的 page
-  Spring Security 的默认行为是用户可以指定相应的 url 让 Spring Security 去实现自动跳转，但是如果我想自己写一个 login page，我希望通过 Ajax call 去调用 Spring Security 的 authentication，但是我不想让 Spring Security 帮我去跳转，我只想知道 Spring Security authentication 的结果是什么，换句话说就是让 Spring Security 将验证的结果返回给我，而不是返回给我一个 forward 的 web page。例如：Spring Security 默认的验证 url 为 ```j_spring_security_check```，那么我可以通过下面的代码实现 Spring Security authentication:
+  Spring Security 的默认行为是用户可以指定相应的 url 让 Spring Security 去实现自动跳转，但是如果我想自己写一个 login page，我希望通过 Ajax call 去调用 Spring Security 的 authentication，但是我不想让 Spring Security 帮我去跳转，我只想知道 Spring Security authentication 的结果是什么，换句话说就是让 Spring Security 将验证的结果返回给我，而不是返回给我一个 forward 的 web page。例如：Spring Security 默认的验证 url 为 `j_spring_security_check`，那么我可以通过下面的代码实现 Spring Security authentication:
 
 {% highlight javascript %}
 
@@ -44,9 +44,9 @@ $.ajax({
 });
 
 {% endhighlight %}
-以上就是前端所有要做的事情，剩下的事情都交给后端处理吧
+  以上就是前端所有要做的事情，剩下的事情都交给后端处理吧
 
-后端要做的事情，首先就是配置，如果你使用的是 Spring 4.0+，也可以写成 java 代码的方式，而不用非要写在 XML 配置文件中，下面就是配置代码：
+  后端要做的事情，首先就是配置，如果你使用的是 Spring 4.0+，也可以写成 java 代码的方式，而不用非要写在 XML 配置文件中，下面就是配置代码：
 
 {% highlight xml %}
 <beans:beans xmlns:beans="http://www.springframework.org/schema/beans"
@@ -66,7 +66,7 @@ $.ajax({
     </http>
 </beans:beans>
 {% endhighlight %}
-这是 Spring Security 的xml配置，可以看到 ```authSuccessHandler``` ```authFailureHandler```这两个 bean，下面是对应的这两个类的代码
+这是 Spring Security 的xml配置，可以看到 `authSuccessHandler` `authFailureHandler`这两个 bean，下面是对应的这两个类的代码
 
 {% highlight java %}
 @Service
@@ -120,9 +120,9 @@ AuthenticationEntryPoint，但是我发现我们这边不用加这个也是可�
 
 ### Thinking in Design
 ok，以上就是代码部分，现在聊聊设计部分。
-一开始，我以为要将 Spring Security authentication 包装成一个 RESTful API，前端直接通过 Ajax Call 就ok了，这个想法现在想起来真是 Too Young Too Simple, Sometimes Naive. 身为一个前端娃儿，我也是够封闭的。那问题是什么呢，如果 Spring Security 仅仅是一个 API，那用户登陆后再发请求就都是合法的了，谁去验证？用户登录过期时间谁来维护，难道前端每次发请求都把用户名/密码带上？前端如果存储用户名/密码？带着这些问题，我终于明白了 Spring Security 配置中 ```<intercept-url pattern="/other/**" access="hasRole('admin')" />``` 的意思。这段 code 的意思就是凡是符合这个规则的请求，都必须有 ```admin``` 权限才可以有正确的返回结果，而谁去验证这个请求呢，当然是 Spring Security 啦，也就是说 Spring Security 就是一个门神，什么请求到 server 端都得它的验证才能通过，终于对 Spring Security 有了基本的概念了。
+一开始，我以为要将 Spring Security authentication 包装成一个 RESTful API，前端直接通过 Ajax Call 就ok了，这个想法现在想起来真是 Too Young Too Simple, Sometimes Naive. 身为一个前端娃儿，我也是够封闭的。那问题是什么呢，如果 Spring Security 仅仅是一个 API，那用户登陆后再发请求就都是合法的了，谁去验证？用户登录过期时间谁来维护，难道前端每次发请求都把用户名/密码带上？前端如果存储用户名/密码？带着这些问题，我终于明白了 Spring Security 配置中 `<intercept-url pattern="/other/**" access="hasRole('admin')" />` 的意思。这段 code 的意思就是凡是符合这个规则的请求，都必须有 `admin` 权限才可以有正确的返回结果，而谁去验证这个请求呢，当然是 Spring Security 啦，也就是说 Spring Security 就是一个门神，什么请求到 server 端都得它的验证才能通过，终于对 Spring Security 有了基本的概念了。
 
-再来说说上面提到的 AuthenticationEntryPoint，我为什么说我们当前的工程部需要这部分的改动呢，是因为我们当前的改动并没有把 Spring Security 改成是一个完完全全的 RESTful API，如果用户发了 request，但是并没有登陆过，我们就通过 Spring Security 默认的规则，让页面定位到登陆页面。不过 AuthenticationEntryPoint 是不是完成我说的这个功能，这仅仅是我的猜想，有待验证。所以从上面我给出的代码可以看出，我们当前的项目实际上不是一个 SPA，而是一个 Login 页面 + SPA, 为什么要这么设计，首先，登陆界面负责验证，通过后会跳转到相应的页面，从上面代码看到，我们项目要跟据当前的 device 定位到不同的 page，为什么要这么做，是因为以前的东西现在还不能移掉，新的 SPA 是为移动端开发的，开发完成才会替换掉 pc 端的 jsp，就为实现这个东西，我才研究的 Spring Security。同时也是因为不想改变当前 request url 规则，前端人应该知道，不管是 Angular.js 还是 React.js，它们 route 的实现都是基于 window.location.hash，而 hash 的值都是在 ```#/```，而我们当前的 url 完全不包含 ```#/```,所以才没办法将 mobile 端整个合并在一起，不过貌似可以把网站的 root 直接设为 ```#```，只是看到有人说，未曾试过。
+再来说说上面提到的 AuthenticationEntryPoint，我为什么说我们当前的工程部需要这部分的改动呢，是因为我们当前的改动并没有把 Spring Security 改成是一个完完全全的 RESTful API，如果用户发了 request，但是并没有登陆过，我们就通过 Spring Security 默认的规则，让页面定位到登陆页面。不过 AuthenticationEntryPoint 是不是完成我说的这个功能，这仅仅是我的猜想，有待验证。所以从上面我给出的代码可以看出，我们当前的项目实际上不是一个 SPA，而是一个 Login 页面 + SPA, 为什么要这么设计，首先，登陆界面负责验证，通过后会跳转到相应的页面，从上面代码看到，我们项目要跟据当前的 device 定位到不同的 page，为什么要这么做，是因为以前的东西现在还不能移掉，新的 SPA 是为移动端开发的，开发完成才会替换掉 pc 端的 jsp，就为实现这个东西，我才研究的 Spring Security。同时也是因为不想改变当前 request url 规则，前端人应该知道，不管是 Angular.js 还是 React.js，它们 route 的实现都是基于 window.location.hash，而 hash 的值都是在 `#/`，而我们当前的 url 完全不包含 `#/`,所以才没办法将 mobile 端整个合并在一起，不过貌似可以把网站的 root 直接设为 `#`，只是看到有人说，未曾试过。
 
 再说新的发现
 参考链接[Spring Security and Angular JS](https://spring.io/guides/tutorials/spring-security-and-angular-js/#add-a-home-page) 这篇文章讲了一下 SPA 如何跟 Spring Security 集成到一起，只看了个开头，注意到下面的code
