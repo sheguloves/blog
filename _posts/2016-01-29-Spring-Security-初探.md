@@ -1,6 +1,6 @@
 ---
 layout: post
-title: RESTful Spring Security for SPA? No really
+title: RESTful Spring Security for SPA? Not really
 description: "This is a notes for ReactJs"
 modified: 2016-01-29
 tags: [spring security, SPA, Ajax, RESTful]
