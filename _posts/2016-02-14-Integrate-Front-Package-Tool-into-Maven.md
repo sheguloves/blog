@@ -77,19 +77,19 @@ pom.xml
 </project>
 {% endhighlight %}
 
+可以看到，上面我没有调用其它的tool，比如gulp，grunt，webpack等，因为在我的`npm run build`命令中，会自动调用webpack命令去打包，所有的事情都交给了webpack，如果你是多个打包工具分开打包，你需要将所有单独使用的打包工具一次添加到pom文件中，作为一个`execution`，[Frontend maven plugin](https://github.com/eirslett/frontend-maven-plugin)的文档中有介绍。
+
 下面是我的package.json文件。
 {% highlight json %}
 {
-    "name": "monitor",
+    "name": "",
     "version": "3.0.0",
-    "description": "This is a Neulion monitor web project",
+    "description": "",
     "main": "index.js",
     "scripts": {
         "build": "webpack --config webpack.config.js --progress --colors"
     },
     "keywords": [
-        "monitor",
-        "Neulion",
         "react",
         "reactjs",
         "hot",
