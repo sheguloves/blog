@@ -15,3 +15,34 @@ tags: [Angular, Angularjs, gulp, browserify]
 ### ng-route | angular-route
 the folder structure like:
 
+{% raw %}
+example
+    public
+    src
+        app
+            controller
+                login.js
+                dashboard.js
+                index.js
+            partials
+                login.html
+                dashboard.html
+            service
+                index.js
+                service.js
+            main.js
+        assets
+            fonts
+                Arial.ttf
+            images
+                1.png
+                2.png
+            styles
+                styles.css
+        data
+            model.js
+        env
+            prod.js
+            dev.js
+    index.html
+{% endraw %}
