@@ -6,13 +6,13 @@ modified: 2016-02-18
 tags: [Angular, Angularjs, gulp, browserify]
 ---
 
-### Background
+## Background
 一直在关注`Angular`, `gulp`, `browserify`,正好公司项目更新,就用这些新的东西来做更新我们的项目.项目地址：[https://github.com/sheguloves/monitor](https://github.com/sheguloves/monitor)
 下面是在构建项目的过程中遇到的一些问题,记录下来,以免忘掉.
 
 <!--more-->
 
-### ng-route | angular-route
+## ng-route | angular-route
 the folder structure like:
 
 {% highlight yaml %}
@@ -67,9 +67,9 @@ app.config(function($routeProvider) {
 
 You can see, the `templateUrl` should be `'app/partials/login.html'`, cannot use `./partials/login.html`
 
-### Angular with browserify
+## Angular with browserify
 
-##### Minify the code generate by browserify
+### Minify the code generate by browserify
 
 First you need to install `gulp-uglify` and `gulp-streamify`
 
@@ -96,7 +96,7 @@ return browserify('app.js')
 
 Now your bundle.js is minified thanks to uglify and streamify. Note that there are multiple ways to do it and this is one of the ways.
 
-##### Minify angular code
+### Minify angular code
 
 **Example**
 
@@ -163,7 +163,7 @@ gulp.task('browserify-min', ['clean'], function() {
 });
 {% endhighlight %}
 
-##### Gulp
+### Gulp
 When I use `gulp` to build my project, I use the following script
 
 {% highlight javascript %}
