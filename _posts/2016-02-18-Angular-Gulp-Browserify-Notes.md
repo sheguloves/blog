@@ -68,6 +68,7 @@ app.config(function($routeProvider) {
 You can see, the `templateUrl` should be `'app/partials/login.html'`, cannot use `./partials/login.html`
 
 ### Angular with browserify
+
 ##### Minify the code generate by browserify
 
 First you need to install `gulp-uglify` and `gulp-streamify`
