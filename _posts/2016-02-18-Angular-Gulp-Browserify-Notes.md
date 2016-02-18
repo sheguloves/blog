@@ -110,6 +110,13 @@ app.controller('LoginCtrl', function ($scope, $timeout, myFooService) {
 If you use above code, you need to use [ng-annotate](https://github.com/olov/ng-annotate), see the following code if you use gulp to build your code.
 
 {% highlight javascript %}
+var gulp = require('gulp'),
+    streamify = require('gulp-streamify'),
+    source = require('vinyl-source-stream'),
+    browserify = require('browserify'),
+    uglify = require('gulp-uglify'),
+    ngAnnotate = require('gulp-ng-annotate');
+
 gulp.task('annotation', ['clean'], function() {
     return gulp.src(['src/app/**/*.js'])
           .pipe(ngAnnotate())
@@ -130,7 +137,7 @@ gulp.task('browserify-min', ['clean', 'annotation'], function() {
 });
 {% endhighlight %}
 
-**But** if you use browserify build your code, you make write code like this:
+**But** if you use browserify build your code, you may write code like this:
 
 index.js
 {% highlight javascript %}
@@ -172,7 +179,7 @@ app.controller('LoginCtrl', ['$scope', '$timeout', 'myFooService', function ($sc
 
 **Other way**
 
-if you just want write code like:
+If you just want write code like:
 
 index.js
 {% highlight javascript %}
@@ -208,8 +215,7 @@ gulp.task('browserify-min', ['clean'], function() {
         .pipe(notify({ message: 'browserify main.js and minification complete' }));
 });
 {% endhighlight %}
-
-then you don't need ng-annotate
+You can see we add option: `{mangle: false}` for `uglify`, then you don't need ng-annotate any more.
 
 **Otherwise**
 
