@@ -15,7 +15,7 @@ tags: [Angular, Angularjs, gulp, browserify]
 ### ng-route | angular-route
 the folder structure like:
 
-{% highlight ruby %}
+{% highlight yaml %}
 example
     public
     src
