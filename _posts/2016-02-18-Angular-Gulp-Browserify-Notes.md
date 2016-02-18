@@ -7,13 +7,14 @@ tags: [Angular, Angularjs, gulp, browserify]
 ---
 
 ### Background
-一直在关注`Angular`, `gulp`, 'browserify'，正好公司项目更新，就用这些新的东西来做更新我们的项目。项目地址：[https://github.com/sheguloves/monitor](https://github.com/sheguloves/monitor)
-下面是在构建项目的过程中遇到的一些问题，记录下来，以免忘掉。
+一直在关注`Angular`, `gulp`, `browserify`,正好公司项目更新,就用这些新的东西来做更新我们的项目.项目地址：[https://github.com/sheguloves/monitor](https://github.com/sheguloves/monitor)
+下面是在构建项目的过程中遇到的一些问题,记录下来,以免忘掉.
 
 <!--more-->
 
 ### ng-route | angular-route
 the folder structure like:
+
 {% highlight %}
 example
     public
@@ -45,7 +46,9 @@ example
             dev.js
     index.html
 {% endhighlight %}
+
 ng-route config in `main.js`:
+
 {% highlight javascript %}
 app.config(function($routeProvider) {
     $routeProvider.when('/login', {
@@ -66,20 +69,22 @@ You can see, the `templateUrl` should be `'app/partials/login.html'`, cannot use
 
 ### Angular with browserify
 ##### Minify the code generate by browserify
-First you need to install gulp-uglify and gulp-streamify
 
-{% highlight %}
+First you need to install `gulp-uglify` and `gulp-streamify`
+
+{% highlight javascript %}
 npm install gulp-uglify gulp-streamify --save-dev
 {% endhighlight %}
 
 Now before piping the concatenated bundle into public/js/bundle.js, you can minify/uglify the response by writing
-{% highlight %}
+
+{% highlight javascript %}
 .pipe(streamify(uglify()))
 {% endhighlight %}
 
 So, the task becomes :
 
-{% highlight %}
+{% highlight javascript %}
 return browserify('app.js')
         .transform('reactify', {stripTypes: true, es6: true})
         .bundle()
@@ -89,19 +94,20 @@ return browserify('app.js')
 {% endhighlight %}
 
 Now your bundle.js is minified thanks to uglify and streamify. Note that there are multiple ways to do it and this is one of the ways.
+
 ##### Minify angular code
 
 **Example**
 
 *Don't* rely on inference:
-{% highlight %}
+{% highlight javascript %}
 function ($scope, $timeout, myFooService) {
 }
 {% endhighlight %}
 
 If you use above code, you need to use [ng-annotate](https://github.com/olov/ng-annotate), see the following code if you use gulp to build your code.
 
-{% highlight %}
+{% highlight javascript %}
 gulp.task('annotation', ['clean'], function() {
     return gulp.src(['src/app/**/*.js'])
           .pipe(ngAnnotate())
@@ -126,21 +132,22 @@ gulp.task('browserify-min', ['clean', 'annotation'], function() {
 
 Use either inline annotation:
 
-{% highlight %}
+{% highlight javascript %}
 [ '$scope', '$timeout', 'myFooService', function ($scope, $rootScope, myFooService) {
 }]
 {% endhighlight %}
 
 Or the `$inject` property:
 
-{% highlight %}
+{% highlight javascript %}
 function MyFactory($scope, $timeout, myFooService) {
 }
 MyFactory.$inject = [ '$scope', '$timeout', 'myFooService' ];
 {% endhighlight %}
+
 You just use the following code to build your code
 
-{% highlight %}
+{% highlight javascript %}
 // minify code
 gulp.task('browserify-min', ['clean'], function() {
     var bundleStream = browserify('src/app/main.js', {
@@ -158,7 +165,7 @@ gulp.task('browserify-min', ['clean'], function() {
 ##### Gulp
 When I use `gulp` to build my project, I use the following script
 
-{% highlight %}
+{% highlight javascript %}
 var gulp = require('gulp'),
     concat = require('gulp-concat'),
     del = require('del');
@@ -176,14 +183,14 @@ gulp.task('build', ['clean', 'concat']);
 
 But sometimes, it does work. Why? I found `del` has a function `sync`, So I use the following code:
 
-{% highlight %}
+{% highlight javascript %}
 gulp.task('clean', function() {
     del.sync(['public/**']);
 });
 {% endhighlight %}
 But I still get error sometime. After a little research I noticed gulp runs all its tasks in parallel. So if you need to run tasks in orders, you just need doing this:
 
-{% highlight %}
+{% highlight javascript %}
 gulp.task('clean', function() {
     return del.sync(['public/**']);
 });
@@ -194,4 +201,5 @@ gulp.task('concat', function() {
 
 gulp.task('build', ['clean', 'concat']);
 {% endhighlight %}
+
 All tasks will execute one by one.
