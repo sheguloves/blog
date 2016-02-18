@@ -101,9 +101,10 @@ Now your bundle.js is minified thanks to uglify and streamify. Note that there a
 **Example**
 
 *Don't* rely on inference:
+
 {% highlight javascript %}
-function ($scope, $timeout, myFooService) {
-}
+app.controller('LoginCtrl', function ($scope, $timeout, myFooService) {
+});
 {% endhighlight %}
 
 If you use above code, you need to use [ng-annotate](https://github.com/olov/ng-annotate), see the following code if you use gulp to build your code.
@@ -123,11 +124,92 @@ gulp.task('browserify-min', ['clean', 'annotation'], function() {
         }).bundle()
         .pipe(source('main.js'))
         .pipe(rename({ suffix: '.min' }))
-        .pipe(streamify(uglify({ mangle: false }))) // see "mangle: false", it must be "false"
+        .pipe(streamify(uglify()))
         .pipe(gulp.dest('public/app'))
         .pipe(notify({ message: 'browserify main.js and minification complete' }));
 });
 {% endhighlight %}
+
+**But** if you use browserify build your code, you make write code like this:
+
+index.js
+{% highlight javascript %}
+var app = require('angular').module('monitor');
+
+//Don't use this, ng-annotate doesn't work for this
+//app.controller('LoginCtrl', require('./login'));
+//app.controller('DashboardCtrl', require('./dashboard'));
+
+//use this
+app.controller('LoginCtrl', ['$scope', '$http', '$location', require('./login')]);
+app.controller('DashboardCtrl', ['$scope', require('./dashboard')]);
+
+{% endhighlight %}
+login.js
+{% highlight javascript %}
+module.exports = function($scope, $http, $location) {
+    $scope.siteName = "test";
+    $scope.logoSrc = "";
+    $scope.validate = true;
+    ...
+    ...
+};
+{% endhighlight %}
+
+Or you can merge two files code into one
+
+{% highlight javascript %}
+app.controller('LoginCtrl', function ($scope, $timeout, myFooService) {
+});
+{% endhighlight %}
+
+then use ng-annotate and ng-annotate will generate the following code:
+
+{% highlight javascript %}
+app.controller('LoginCtrl', ['$scope', '$timeout', 'myFooService', function ($scope, $timeout, myFooService) {
+});
+{% endhighlight %}
+
+**Other way**
+
+if you just want write code like:
+
+index.js
+{% highlight javascript %}
+var app = require('angular').module('monitor');
+app.controller('LoginCtrl', require('./login'));
+app.controller('DashboardCtrl', require('./dashboard'));
+
+{% endhighlight %}
+login.js
+{% highlight javascript %}
+module.exports = function($scope, $http, $location) {
+    $scope.siteName = "test";
+    $scope.logoSrc = "";
+    $scope.validate = true;
+    ...
+    ...
+};
+{% endhighlight %}
+
+You can modify the build script like:
+
+{% highlight javascript %}
+// minify code
+gulp.task('browserify-min', ['clean'], function() {
+    var bundleStream = browserify('src/app/main.js', {
+            insertGlobals: true,
+            debug: false
+        }).bundle()
+        .pipe(source('main.js'))
+        .pipe(rename({ suffix: '.min' }))
+        .pipe(streamify(uglify({ mangle: false }))) // Important, if there is no "mangle: false", build cannot run
+        .pipe(gulp.dest('public/app'))
+        .pipe(notify({ message: 'browserify main.js and minification complete' }));
+});
+{% endhighlight %}
+
+then you don't need ng-annotate
 
 **Otherwise**
 
@@ -162,6 +244,8 @@ gulp.task('browserify-min', ['clean'], function() {
         .pipe(notify({ message: 'browserify main.js and minification complete' }));
 });
 {% endhighlight %}
+
+Pick up the favorite to build your code
 
 ### Gulp
 When I use `gulp` to build my project, I use the following script
