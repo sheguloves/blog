@@ -15,7 +15,7 @@ tags: [Angular, Angularjs, gulp, browserify]
 ### ng-route | angular-route
 the folder structure like:
 
-{% raw %}
+{% highlight ruby %}
 example
     public
     src
@@ -45,4 +45,4 @@ example
             prod.js
             dev.js
     index.html
-{% endraw %}
+{% endhighlight %}
