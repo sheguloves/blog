@@ -1,3 +1,11 @@
+---
+layout: post
+title: A Deep Dive into ES6 Class Reading Notes
+description: "A Deep Dive into ES6 Class Reading Notes"
+modified: 2016-02-18
+tags: [ES6, Javascript, Class]
+---
+
 ### Background
 最近一直忙于项目的setup，今天基础框架基本搭好，终于有时间来弥补一下这段时间的Reading。此文就是今天阅读过程中看到的一些不太了解得地方，记下来，供将来参考。
 
