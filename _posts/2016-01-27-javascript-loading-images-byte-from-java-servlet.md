@@ -6,7 +6,7 @@ modified: 2016-01-27
 tags: [Javascript, Java, Image Byte]
 ---
 
-## How to get the correct "src" value of ```<img>``` by ajax call from java servlet
+## How to get the correct "src" value of `<img>` by ajax call from java servlet
 
 ### Javascript
 
