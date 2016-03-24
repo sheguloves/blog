@@ -4,6 +4,7 @@ title:      "Angular Notes"
 subtitle:   "Angular Notes"
 date:       2016-02-18
 author:     "Felix Xi"
+header-img: "img/banner-4.jpg"
 tags:
     - Angular
     - CSS
@@ -15,8 +16,6 @@ tags:
 
 我们都知道，要更新dom，可以利用Angular的数据绑定，通过更改style或者class来动态的更新dom.<br>
 但是有一种情况是如果用户做了一个操作，更新了$scope中的数据，同时我们给更新的数据添加了事件监听函数，并在此函数中执行一些数据处理的操作，正常情况下，数据操作应该在后端完成，前端只负责展示，但是如果数据量特别大，处理函数要2秒以上才能处理完，而此时页面就好像死掉了一样，这样的用户体验是非常差的。如果我们在处理数据的时候，在页面上显示一个loading的状态，这样会很好的改善用户体验。
-
-<!--more-->
 
 但是如何添加loading并且在loading结束后取消loading呢？第一个想到的方法就是添加一个loading的div，数据开始处理之前，设置当前的状态为loading，同时更新loading div的style或者class,看下面的代码：
 

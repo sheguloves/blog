@@ -4,7 +4,7 @@ title:      "学习资源总汇"
 subtitle:   "这篇文章记录了一些个人用的资源链接，供学习参考"
 date:       2015-08-05
 author:     "Felix Xi"
-header-img: "img/post-bg-js-version.jpg"
+header-img: "img/banner.jpg"
 tags:
     - 前端开发
     - JavaScript

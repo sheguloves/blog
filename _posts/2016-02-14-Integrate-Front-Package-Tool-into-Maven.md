@@ -4,6 +4,7 @@ title:      "Integrate Front Package Tool into Maven"
 subtitle:   "Integrate Front Package Tool into Maven"
 date:       2016-02-14
 author:     "Felix Xi"
+header-img: "img/peebles.jpg"
 tags:
     - NPM
     - Maven
@@ -14,7 +15,6 @@ tags:
 ### Background
 正如我们所知，Maven无疑是java代码打包的首选（是不是唯一不清楚）工具，然而，对于前端而言，涌现出太多太多的打包工具，例如最新：grunt, gulp, webpack 等等。如何将前端javascript，html与后端一起打包呢，这就是我今天要写到的一个Maven Plugin：[Frontend maven plugin](https://github.com/eirslett/frontend-maven-plugin)
 
-<!--more-->
 
 ### Implementation
 在它的 [Github](https://github.com/eirslett/frontend-maven-plugin)上有比较清楚的文档，我在下面贴出我的pom文件，仅供参考。

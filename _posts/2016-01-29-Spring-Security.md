@@ -4,6 +4,7 @@ title:      "RESTful Spring Security for SPA? Not really"
 subtitle:   "RESTful Spring Security for SPA? Not really"
 date:       2016-01-29
 author:     "Felix Xi"
+header-img: "img/night.jpg"
 tags:
     - Spring Security
     - SPA
@@ -15,7 +16,6 @@ tags:
 现在的Team在维护一个用户数据监测系统，采用的是比较老的 JSP + Spring Security + Spring MVC 这套框架。以前虽然有过一些 Spring 的基本了解，但是对 Spring MVC 和 Spring Security 根本没有系统的看过，正好凑这个机会看了一下，顺便跟据项目需求完成几个 task，总结了一些经验，赶紧写下来，怕以后忘掉。
 因为也没有完全系统的都去看一遍，是一边猜一边试的结果，就按照我的需求来一一列出来吧。
 
-<!--more-->
 
 ### Implementation
 

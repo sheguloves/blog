@@ -4,6 +4,7 @@ title:      "Environment Setup"
 subtitle:   "This is a notes for development environment setup"
 date:       2015-11-08
 author:     "Felix Xi"
+header-img: "img/banner-1.jpg"
 tags:
     - 前端开发
     - environment
@@ -16,7 +17,6 @@ git config --global http.proxy http://<host>:<port>
 git config --global https.proxy http://<host>:<port>
 {% endhighlight %}
 
-<!--more-->
 
 ### npm proxy
 

@@ -4,6 +4,7 @@ title:      "Note for React.js with Webpack"
 subtitle:   "This is a note for React.js"
 date:       2016-01-20
 author:     "Felix Xi"
+header-img: "img/directory-1.jpg"
 tags:
     - webpack
     - react
