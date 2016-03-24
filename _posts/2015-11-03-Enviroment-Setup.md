@@ -1,9 +1,12 @@
 ---
-layout: post
-title: Environment Setup
-description: "This is a notes for development environment setup"
-modified: 2015-11-08
-tags: [environment]
+layout:     post
+title:      "Environment Setup"
+subtitle:   "This is a notes for development environment setup"
+date:       2015-11-08
+author:     "Felix Xi"
+tags:
+    - 前端开发
+    - environment
 ---
 
 ### Config git proxy

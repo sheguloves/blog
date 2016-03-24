@@ -1,10 +1,14 @@
 ---
-layout: post
-title: ReactJs & Webpack Notes
-description: "This is a notes for ReactJs"
-modified: 2016-01-20
-tags: [react, webpack]
+layout:     post
+title:      "Note for React.js with Webpack"
+subtitle:   "This is a note for React.js"
+date:       2016-01-20
+author:     "Felix Xi"
+tags:
+    - webpack
+    - react
 ---
+
 ### React
 
 #### Properties in JSX

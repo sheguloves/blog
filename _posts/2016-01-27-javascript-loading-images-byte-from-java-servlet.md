@@ -1,9 +1,11 @@
 ---
-layout: post
-title: Javascript use byte images from java servlet
-description: "Javascript use byte images from java servlet"
-modified: 2016-01-27
-tags: [Javascript, Java, Image Byte]
+layout:     post
+title:      "Javascript use byte images from java servlet"
+subtitle:   "Javascript use byte images from java servlet"
+date:       2016-01-27
+author:     "Felix Xi"
+tags:
+    - 前端开发
 ---
 
 ## How to get the correct "src" value of `<img>` by ajax call from java servlet

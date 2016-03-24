@@ -1,9 +1,14 @@
 ---
-layout: post
-title: A Deep Dive into ES6 Class Reading Notes
-description: "A Deep Dive into ES6 Class Reading Notes"
-modified: 2016-02-18
-tags: [ES6, Javascript, Class]
+layout:     post
+title:      "A Deep Dive into ES6 Class Reading Notes"
+subtitle:   "A Deep Dive into ES6 Class Reading Notes"
+date:       2016-02-18
+author:     "Felix Xi"
+header-img: "img/post-bg-js-version.jpg"
+tags:
+    - Javascript
+    - Class
+    - ES6
 ---
 
 ### Background
@@ -13,7 +18,6 @@ tags: [ES6, Javascript, Class]
 [原文地址](http://www.sitepoint.com/object-oriented-javascript-deep-dive-es6-classes/)
 
 ### Notes
-引用
 
   > * When a function is associated with a class or object, we call it a “method”.
   > * When an object is created from a class, that object is said to be an “instance” of the class.

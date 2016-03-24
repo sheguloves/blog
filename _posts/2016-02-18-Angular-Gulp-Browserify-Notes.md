@@ -1,9 +1,14 @@
 ---
-layout: post
-title: Angular with gulp and browserify
-description: "Build Angularjs app with gulp and browserify"
-modified: 2016-02-18
-tags: [Angular, Angularjs, gulp, browserify]
+layout:     post
+title:      "Angular with Gulp and Browserify"
+subtitle:   "Build Angularjs App with Gulp and Browserify"
+date:       2016-02-18
+author:     "Felix Xi"
+header-img: "img/post-bg-js-version.jpg"
+tags:
+    - Angular
+    - Gulp
+    - Browserify
 ---
 
 ## Background

@@ -1,14 +1,23 @@
 ---
-layout: post
-title: Angular Notes
-description: "Angular Notes"
-modified: 2016-02-18
-tags: [Angular, css, MEAN, Authentication]
+layout:     post
+title:      "Angular Notes"
+subtitle:   "Angular Notes"
+date:       2016-02-18
+author:     "Felix Xi"
+tags:
+    - Angular
+    - CSS
+    - MEAN
+    - Authentication
 ---
 
 #### 当处理数据非常慢时，如何添加loading
-我们都知道，要更新dom，可以利用Angular的数据绑定，通过更改style或者class来动态的更新dom，但是有一种情况是如果用户做了一个操作，更新了$scope中的数据，同时我们给更新的数据添加了事件监听函数，并在此函数中执行一些数据处理的操作，正常情况下，数据操作应该在后端完成，前端只负责展示，但是如果数据量特别大，处理函数要2秒以上才能处理完，而此时页面就好像死掉了一样，这样的用户体验是非常差的。如果我们在处理数据的时候，在页面上显示一个loading的状态，这样会很好的改善用户体验。
+
+我们都知道，要更新dom，可以利用Angular的数据绑定，通过更改style或者class来动态的更新dom.<br>
+但是有一种情况是如果用户做了一个操作，更新了$scope中的数据，同时我们给更新的数据添加了事件监听函数，并在此函数中执行一些数据处理的操作，正常情况下，数据操作应该在后端完成，前端只负责展示，但是如果数据量特别大，处理函数要2秒以上才能处理完，而此时页面就好像死掉了一样，这样的用户体验是非常差的。如果我们在处理数据的时候，在页面上显示一个loading的状态，这样会很好的改善用户体验。
+
 <!--more-->
+
 但是如何添加loading并且在loading结束后取消loading呢？第一个想到的方法就是添加一个loading的div，数据开始处理之前，设置当前的状态为loading，同时更新loading div的style或者class,看下面的代码：
 
 {% highlight html %}
@@ -26,7 +35,9 @@ $scope.loading = false;
 
 {% endhighlight %}
 好了，我们运行一下。
-结果呢？我擦，不work。为什么呢？我们知道，javascript是单线程，当我们执行`$scope.loading = true;`后，紧接着`processData();`，此时Angular并不会更新dom，而是会接着执行`$scope.loading = false;`，最后一切都执行结束后，更新dom，也就是说我们先设置loading为true，然后又设置为false，dom上根本没更新。
+
+结果呢？我擦，不work。<br>为什么呢？我们知道，javascript是单线程，当我们执行`$scope.loading = true;`后，紧接着`processData();`，此时Angular并不会更新dom，而是会接着执行`$scope.loading = false;`，最后一切都执行结束后，更新dom，也就是说我们先设置loading为true，然后又设置为false，dom上根本没更新。
+
 一般情况下，数据都是通过Ajax请求从后端获取，获取过程中设置loading为true，数据取回来后，在回调函数中将loading重新设置为false，这是起作用的。But why？因为Ajax是异步请求，我们在发送请求之前，将loading设置为true，这时所有的操作就已经结束了，Angular会去更新dom，等到数据取回来后，是重新启动了一系列的操作，这时我们将loading设置为false，然后更新数据，最后更新dom。重点就是**异步操作**。那么可以将我们上面的代码改改：
 {% highlight html %}
 <div id="loading" ng-style="{display: loading ? 'block' : 'none'}"></div>

@@ -1,9 +1,14 @@
 ---
-layout: post
-title: Integrate front package tool into maven
-description: "Integrate front package tool into maven"
-modified: 2016-02-14
-tags: [maven, webpack, node.js, npm]
+layout:     post
+title:      "Integrate Front Package Tool into Maven"
+subtitle:   "Integrate Front Package Tool into Maven"
+date:       2016-02-14
+author:     "Felix Xi"
+tags:
+    - NPM
+    - Maven
+    - Webpack
+    - Node.js
 ---
 
 ### Background
