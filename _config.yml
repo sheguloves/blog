@@ -41,7 +41,7 @@ kramdown:
 
 
 # Disqus settings
-disqus_shortname: sheguloves
+disqus_username: sheguloves
 
 # Duoshuo settings
 # duoshuo_username: sheguloves
