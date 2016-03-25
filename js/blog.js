@@ -11,7 +11,7 @@ $(function() {
 
 
 // make all images responsive
-/* 
+/*
  * Unuse by Hux
  * actually only Portfolio-Pages can't use it and only post-img need it.
  * so I modify the _layout/post and CSS to make post-img responsive!
@@ -27,7 +27,7 @@ $(document).ready(function() {
 });
 
 // responsive embed videos
-$(document).ready(function () { 
+$(document).ready(function () {
     $('iframe[src*="youtube.com"]').wrap('<div class="embed-responsive embed-responsive-16by9"></div>');
 	$('iframe[src*="youtube.com"]').addClass('embed-responsive-item');
     $('iframe[src*="vimeo.com"]').wrap('<div class="embed-responsive embed-responsive-16by9"></div>');
@@ -40,26 +40,19 @@ jQuery(document).ready(function($) {
 
     //primary navigation slide-in effect
     if ($(window).width() > MQL) {
-        var headerHeight = $('.navbar-custom').height();
-        $(window).on('scroll', {
-                previousTop: 0
-            },
+        $(window).on('scroll',
             function() {
                 var currentTop = $(window).scrollTop();
-                //check if user is scrolling up
-                if (currentTop < this.previousTop) {
-                    //if scrolling up...
-                    if (currentTop > 0 && $('.navbar-custom').hasClass('is-fixed')) {
+                if (currentTop > 3) {
+                    if (!$('.navbar-custom').hasClass('is-fixed')) {
+                        $('.navbar-custom').addClass('is-fixed');
+                    }
+                    if (!$('.navbar-custom').hasClass('is-visible')) {
                         $('.navbar-custom').addClass('is-visible');
-                    } else {
-                        $('.navbar-custom').removeClass('is-visible is-fixed');
                     }
                 } else {
-                    //if scrolling down...
-                    $('.navbar-custom').removeClass('is-visible');
-                    if (currentTop > headerHeight && !$('.navbar-custom').hasClass('is-fixed')) $('.navbar-custom').addClass('is-fixed');
+                    $('.navbar-custom').removeClass('is-visible is-fixed');
                 }
-                this.previousTop = currentTop;
             });
     }
 });
