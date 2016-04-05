@@ -54,6 +54,9 @@ tags:
 
 ## 在线工具
 
+* [博客评论](https://disqus.com/)
+* [免费图片](https://pixabay.com/)
+
 #### HTML
 
 * [Liveweave](http://liveweave.com/)
@@ -85,7 +88,18 @@ tags:
 * [程序师](http://www.techug.com/)
 * [Medium](https://medium.com/)
 
-## 工具
+## Design
 
-* [博客评论](https://disqus.com/)
-* [免费图片](https://pixabay.com/)
+* [腾讯ISUX](http://isux.tencent.com/)
+* [FWA](http://www.thefwa.com/)
+* [**Facebook Design**](https://medium.com/facebook-design)
+* [**Site Inspire**](http://www.siteinspire.com/)
+* [**dribbble**](https://dribbble.com/)
+* [Folio Focus](http://foliofocus.com/)
+
+## Other
+
+* [Medium](https://medium.com/)
+* [**Pinterest**](https://www.pinterest.com/)
+
+
