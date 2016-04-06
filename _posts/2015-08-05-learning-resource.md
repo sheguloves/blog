@@ -56,6 +56,9 @@ tags:
 
 * [博客评论](https://disqus.com/)
 * [免费图片](https://pixabay.com/)
+* [Can I Use](http://caniuse.com/)
+* [Icon Font & SVG Icon](https://icomoon.io/)
+* [Icon Font Generator](http://fontello.com/)
 
 #### HTML
 
@@ -101,5 +104,9 @@ tags:
 
 * [Medium](https://medium.com/)
 * [**Pinterest**](https://www.pinterest.com/)
+
+## RSS
+
+* [feedly - *facebook account*](https://feedly.com/)
 
 
