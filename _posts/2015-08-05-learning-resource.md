@@ -104,9 +104,16 @@ tags:
 
 * [Medium](https://medium.com/)
 * [**Pinterest**](https://www.pinterest.com/)
+* [在线Notes](https://trello.com/b/MBP1bQ3s/welcome-board)
 
 ## RSS
 
 * [feedly - *facebook account*](https://feedly.com/)
+
+
+## Kindle
+
+* [Kindle电子书籍下载网站目录](https://www.douban.com/group/topic/27867255/)
+* [子乌书简](http://book.zi5.me/)
 
 
