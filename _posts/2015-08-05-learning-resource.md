@@ -98,6 +98,7 @@ tags:
 * [**Facebook Design**](https://medium.com/facebook-design)
 * [**Site Inspire**](http://www.siteinspire.com/)
 * [**dribbble**](https://dribbble.com/)
+* [**Designer News**](https://www.designernews.co/)
 * [Folio Focus](http://foliofocus.com/)
 
 ## Other
