@@ -69,5 +69,5 @@ parent div float: left / display: inline-block / float: left
 parent div overflow: hidden
 ![parent div overflow hidden](/img/css-notes/overflow-hidden.png "Parent div overflow hidden")
 
-如果想对包裹性及清除浮动有更加深入的了解，请参考张鑫旭大神的[对overflow与zoom清除浮动的一些认识](http://www.zhangxinxu.com/wordpress/2010/01/%E5%AF%B9overflow%E4%B8%8Ezoom%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AE%A4%E8%AF%86/)
+如果想对包裹性及清除浮动有更加深入的了解，请参考张鑫旭大神的：[对overflow与zoom清除浮动的一些认识](http://www.zhangxinxu.com/wordpress/2010/01/%E5%AF%B9overflow%E4%B8%8Ezoom%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AE%A4%E8%AF%86/)
 
