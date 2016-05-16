@@ -27,27 +27,29 @@ tags:
 ```
 .clear:after {
     content: ".";
-    height: 0;
+    height: 0; // or line-height: 0
     visibility: hidden;
     clear: both;
-    display: block; /* 为什么要用block */
+    display: block; /* 为什么要用block? 请自行google */
 }
 
 ```
-或者将父元素也设为`float`元素或者将父元素的`overflow: hidden/auto`，将父元素也设为`float`的效果跟其他方式的效果不同的是，其他方式一般会把父元素的width撑到最大宽度，而为父元素设置`float`的效果则是只将父元素撑开到容得下子元素为止，这是为什么呢？这是因为`Block`元素，如div元素，在默认情况下（非浮动、绝对定位等），水平方向会自动填满外部的容器，而`float`元素具有包裹性。比如代码如下:
+或者将父元素也设为`float`元素或者将父元素的`overflow: hidden/auto`，将父元素也设为`float`的效果跟其他方式的效果不同的是，其他方式一般会把父元素的width撑到最大宽度，而为父元素设置`float`的效果则是只将父元素撑开到容得下子元素为止，这是为什么呢？这是因为`Block`元素，如div元素，在默认情况下（非浮动、绝对定位等），水平方向会自动填满外部的容器，而`float`、`absolute`、`inline-block`元素则不会这样，为什么呢，我的理解是他们具有包裹性。（当然按照张鑫旭大神的说法，`overflow: hidden/auto`也是有包裹性的，但是这个包裹性与其他几种方式是有区别的，不包括zoom）那么包裹性具体是什么呢？请看如下代码:
 
 ```
-<div id="warpper" class="clear">
+<div id="wrapper">
   <div class="box"></div>
   <div class="box"></div>
 </div>
 ```
 
 ```
-#warpper {
+#wrapper {
   border: 1px solid red;
-/*   float: left; */
 /*   overflow: hidden; */
+/*   display: inline-block; */
+/*   position: absolute; */
+/*   float: left; */
   margin: 10px;
 }
 .box {
@@ -57,19 +59,15 @@ tags:
   border: 1px solid blue;
   margin: 10px;
 }
-.clear:after {
-/*   content: ".";
-  clear: both;
-  display: block;
-  height: 0;
-  visibility: hidden; */
-}
-```
-通过几种不同的方式，产生的效果会不同。
 
-parent div float left:
+```
+通过几种不同的清除浮动的方式，产生的效果会不同。
+
+parent div float: left / display: inline-block / float: left
 ![parent div float left](/img/css-notes/float-left.png "Parent div float left")
 
-parent div overflow hidden:
+parent div overflow: hidden
 ![parent div overflow hidden](/img/css-notes/overflow-hidden.png "Parent div overflow hidden")
+
+如果想对包裹性及清除浮动有更加深入的了解，请参考张鑫旭大神的[对overflow与zoom清除浮动的一些认识](http://www.zhangxinxu.com/wordpress/2010/01/%E5%AF%B9overflow%E4%B8%8Ezoom%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AE%A4%E8%AF%86/)
 
