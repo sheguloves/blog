@@ -1,0 +1,31 @@
+---
+layout:     post
+title:      "Javascript Base Knowledge"
+subtitle:   "Javascript Base Knowledge"
+date:       2016-05-11
+author:     "Felix Xi"
+header-img: "img/all-1.jpg"
+tags:
+    - Javascript
+---
+
+Javascript 采用“IEEE 754标准定义的双精度64位格式”表示数字，不区分整数值和浮点数值，所有数字在javascript中均用浮点数值表示，所以在进行数字运算时要特别注意。
+
+```
+0.1 + 0.2 = 0.30000000000000004
+```
+
+> 你可以使用内置函数 parseInt() 将字符串转换为整型。该函数的第二个参数表示字符串所表示数字的基（进制）
+
+> JavaScript 还有一个类似的内置函数 parseFloat()，用以解析浮点数字符串，与parseInt()不同的地方是，parseFloat()只应用于解析十进制数字。
+
+> 如果把 NaN 作为参数进行任何数学运算，结果也会是 NaN
+
+> parseInt() 和 parseFloat() 函数会尝试逐个解析字符串中的字符，直到遇上一个无法被解析成数字的字符，然后返回该字符前所有数字字符组成的数字。使用运算符 "+" 将字符串转换成数字，只要字符串中含有无法被解析成数字的字符，该字符串都将被转换成 NaN。请你用这两种方法分别解析“10.2abc”这一字符串，比较得到的结果，理解这两种方法的区别。
+
+> JavaScript 按照如下规则将变量转换成布尔类型：
+>
+>  * false、0、空字符串("")、NaN、null 和 undefined 被转换为 false
+>  * 所有其他值被转换为 true
+
+> 在 switch 的表达式和 case 的表达式是使用 === 严格相等运算符进行比较的
