@@ -36,6 +36,7 @@ tags:
 * [W3C school](http://www.w3school.com.cn/)
 * [HTML Standard](https://html.spec.whatwg.org/)
 * [Tutorials Point](http://www.tutorialspoint.com/)
+* [Learn Layout](http://zh.learnlayout.com/)
 
 #### 资源网站
 
@@ -56,9 +57,13 @@ tags:
 
 * [博客评论](https://disqus.com/)
 * [免费图片](https://pixabay.com/)
-* [Can I Use](http://caniuse.com/)
-* [Icon Font & SVG Icon](https://icomoon.io/)
-* [Icon Font Generator](http://fontello.com/)
+* [Can I Use](http://caniuse.com/), CSS browser support
+* [Icon Font & SVG Icon](https://icomoon.io/), get icons
+* [Icon Font Generator](http://fontello.com/), get icons
+* [Color Hex](http://www.colorhexa.com/), analysis color
+* [Flat UI color picker](http://www.flatuicolorpicker.com/), find a color
+* [LoL colors](http://www.lolcolors.com/), find color palette
+* [Brand colors](http://brandcolors.net/)
 
 #### HTML
 
@@ -66,11 +71,6 @@ tags:
 * [Code Pen](http://codepen.io/milneang/)
 * [JS Fiddle](http://jsfiddle.net/)
 * [Plunker](http://plnkr.co/)
-
-#### CSS
-
-* [Learn Layout](http://zh.learnlayout.com/)
-* [CSS browser support](http://caniuse.com/#)
 
 #### Markdown
 
