@@ -7,7 +7,6 @@ author:     "Felix Xi"
 header-img: "img/banner-9.jpg"
 tags:
     - Angular
-    - Directive
 ---
 
 ### Background

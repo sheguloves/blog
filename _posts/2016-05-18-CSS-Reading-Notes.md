@@ -4,6 +4,7 @@ title:      "CSS Reading Notes"
 subtitle:   "Blog Reading Notes - css相对定位relative绝对定位absolute系列"
 date:       2016-05-18
 author:     "Felix Xi"
+catalog: true
 header-img: "img/all-2.jpg"
 tags:
     - CSS

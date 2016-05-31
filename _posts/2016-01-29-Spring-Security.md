@@ -5,6 +5,7 @@ subtitle:   "RESTful Spring Security for SPA? Not really"
 date:       2016-01-29
 author:     "Felix Xi"
 header-img: "img/night.jpg"
+catalog: true
 tags:
     - Spring Security
     - SPA

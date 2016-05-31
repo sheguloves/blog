@@ -5,6 +5,7 @@ subtitle:   "这篇文章记录了一些个人用的资源链接，供学习参�
 date:       2015-08-05
 author:     "Felix Xi"
 header-img: "img/banner.jpg"
+catalog: true
 tags:
     - 前端开发
     - JavaScript

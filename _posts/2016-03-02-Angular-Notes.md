@@ -5,6 +5,7 @@ subtitle:   "Angular Notes"
 date:       2016-02-18
 author:     "Felix Xi"
 header-img: "img/banner-4.jpg"
+catalog: true
 tags:
     - Angular
     - CSS

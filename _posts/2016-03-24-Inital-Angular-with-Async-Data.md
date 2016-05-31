@@ -7,10 +7,13 @@ author:     "Felix Xi"
 header-img: "img/banner-5.jpg"
 tags:
     - Angular
-    - Async Data
 ---
 
 ### Background
+
+在开发过程中，我们经常会遇到需要在界面出来之前需要提前做一些配置，而配置信息有些则是从后端拿来，那么在 `Angular` 中如何实现呢？请看下文。
+
+### Content
 
 正如我们所了解的，配置 Angular Router 需要在 Angular APP 初始化的时候去完成
 

@@ -5,6 +5,7 @@ subtitle:   "A Deep Dive into ES6 Class Reading Notes"
 date:       2016-02-18
 author:     "Felix Xi"
 header-img: "img/banner-3.jpg"
+catalog: true
 tags:
     - Javascript
     - Class

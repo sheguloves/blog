@@ -4,6 +4,7 @@ title:      "Environment Setup"
 subtitle:   "This is a notes for development environment setup"
 date:       2015-11-08
 author:     "Felix Xi"
+catalog: true
 header-img: "img/banner-1.jpg"
 tags:
     - 前端开发

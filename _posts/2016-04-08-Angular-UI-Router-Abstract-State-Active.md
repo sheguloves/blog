@@ -5,6 +5,7 @@ subtitle:   "Make angular-ui-router abstract state active"
 date:       2016-04-08
 author:     "Felix Xi"
 header-img: "img/banner-7.jpg"
+catalog: true
 tags:
     - Angular-ui-router
     - Angular

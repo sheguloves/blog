@@ -5,6 +5,7 @@ subtitle:   "Javascript use byte images from java servlet"
 date:       2016-01-27
 author:     "Felix Xi"
 header-img: "img/frogs.jpg"
+catalog: true
 tags:
     - 前端开发
 ---

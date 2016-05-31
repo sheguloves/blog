@@ -5,6 +5,7 @@ subtitle:   "Integrate Front Package Tool into Maven"
 date:       2016-02-14
 author:     "Felix Xi"
 header-img: "img/peebles.jpg"
+catalog: true
 tags:
     - NPM
     - Maven

@@ -5,9 +5,9 @@ subtitle:   "Angular expression binding to arbitrary attributes"
 date:       2016-04-07
 author:     "Felix Xi"
 header-img: "img/banner-6.jpg"
+catalog: true
 tags:
     - Angular
-    - Data Binding
 ---
 
 ### Background

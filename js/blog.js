@@ -37,6 +37,7 @@ $(document).ready(function () {
 // Navigation Scripts to Show Header on Scroll-Up
 jQuery(document).ready(function($) {
     var MQL = 1170;
+    var bannerHeight  = $('.intro-header .container').height();
 
     //primary navigation slide-in effect
     if ($(window).width() > MQL) {
@@ -52,6 +53,13 @@ jQuery(document).ready(function($) {
                     }
                 } else {
                     $('.navbar-custom').removeClass('is-visible is-fixed');
+                }
+
+                var $catalog = $('.side-catalog');
+                if (currentTop > (bannerHeight - 20)) {
+                    $catalog.addClass('fixed')
+                } else {
+                    $catalog.removeClass('fixed')
                 }
             });
     }

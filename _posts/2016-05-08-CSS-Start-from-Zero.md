@@ -4,6 +4,7 @@ title:      "CSS Start from Zero"
 subtitle:   "CSS从零单排-01"
 date:       2016-05-08
 author:     "Felix Xi"
+catalog: true
 header-img: "img/frogs.jpg"
 tags:
     - CSS

@@ -5,6 +5,7 @@ subtitle:   "Build Angularjs App with Gulp and Browserify"
 date:       2016-02-18
 author:     "Felix Xi"
 header-img: "img/sunset.jpg"
+catalog: true
 tags:
     - Angular
     - Gulp
