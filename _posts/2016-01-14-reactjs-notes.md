@@ -7,8 +7,8 @@ author:     "Felix Xi"
 catalog: true
 header-img: "img/directory-1.jpg"
 tags:
-    - webpack
-    - react
+    - Webpack
+    - React
 ---
 
 ### React

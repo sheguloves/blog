@@ -6,7 +6,7 @@ date:       2016-05-11
 author:     "Felix Xi"
 header-img: "img/all-1.jpg"
 tags:
-    - Javascript
+    - JavaScript
 ---
 
 Javascript 采用“IEEE 754标准定义的双精度64位格式”表示数字，不区分整数值和浮点数值，所有数字在javascript中均用浮点数值表示，所以在进行数字运算时要特别注意。

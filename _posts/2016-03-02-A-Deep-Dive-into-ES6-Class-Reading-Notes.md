@@ -8,7 +8,6 @@ header-img: "img/banner-3.jpg"
 catalog: true
 tags:
     - Javascript
-    - Class
     - ES6
 ---
 
