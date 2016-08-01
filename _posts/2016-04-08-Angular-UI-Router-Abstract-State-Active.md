@@ -7,9 +7,7 @@ author:     "Felix Xi"
 header-img: "img/banner-7.jpg"
 catalog: true
 tags:
-    - Angular-ui-router
     - Angular
-    - Directive
 ---
 
 ### Background
