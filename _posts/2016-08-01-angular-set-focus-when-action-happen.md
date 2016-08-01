@@ -11,9 +11,10 @@ tags:
 
 Reference: [http://stackoverflow.com/questions/14833326/how-to-set-focus-on-input-field](http://stackoverflow.com/questions/14833326/how-to-set-focus-on-input-field)
 
-##### When a Modal is opened, set focus on a predefined <input> inside this Modal.
+##### When a Modal is opened, set focus on a predefined `<input>` inside this Modal.
 
-Define a directive and have it $watch a property/trigger so it knows when to focus the element:
+Define a directive and have it `$watch` a property/trigger so it knows when to focus the element:
+
 ```
 Name: <input type="text" focus-me="shouldBeOpen">
 ```
@@ -43,9 +44,9 @@ app.directive('focusMe', function($timeout, $parse) {
 });
 ```
 
-The $timeout seems to be needed to give the modal time to render.
+The `$timeout` seems to be needed to give the modal time to render.
 
-##### Everytime <input> becomes visible (e.g. by clicking some button), set focus on it.
+##### Everytime `<input>` becomes visible (e.g. by clicking some button), set focus on it.
 
 Create a directive essentially like the one above. Watch some scope property, and when it becomes true (set it in your ng-click handler), execute `element[0].focus()`. Depending on your use case, you may or may not need a `$timeout` for this one:
 
@@ -132,4 +133,4 @@ app.directive('focusMe', function($timeout) {
 });
 ```
 
-Since we need to reset the trigger/focusInput property in the directive, '=' is used for two-way databinding. In the first directive, '@' was sufficient. Also note that when using '@' we compare the trigger value to "true" since @ always results in a string.
+Since we need to reset the trigger/focusInput property in the directive, `'='` is used for two-way databinding. In the first directive, `'@'` was sufficient. Also note that when using `'@'` we compare the trigger value to `"true"` since `'@'` always results in a string.
