@@ -9,7 +9,7 @@ tags:
     - CSS
 ---
 
-本文转自：https://ruby-china.org/topics/14005
+本文转自：[Web 中文字体应用指南](https://ruby-china.org/topics/14005)
 
 #### Web 中文字体应用指南
 
