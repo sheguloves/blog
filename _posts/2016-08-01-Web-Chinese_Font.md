@@ -4,7 +4,7 @@ title:      "Web Chinese Font"
 subtitle:   "Web Chinese Font"
 date:       2016-05-19
 author:     "Felix Xi"
-header-img: "img/code-1.jpg"
+header-img: "img/code-2.jpg"
 tags:
     - CSS
 ---
