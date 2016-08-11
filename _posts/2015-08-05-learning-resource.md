@@ -117,6 +117,7 @@ tags:
 
 * [Kindle电子书籍下载网站目录](https://www.douban.com/group/topic/27867255/)
 * [子乌书简](http://book.zi5.me/)
+* [看看豆](http://kankandou.com/)
 
 ## Tools
 
