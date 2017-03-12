@@ -91,14 +91,13 @@ tags:
 ![user action](/img/browser_cache/user_action.png "user action")
 
 ### 参考阅读
-[透过浏览器看HTTP缓存](http://www.cnblogs.com/skylar/p/browser-http-caching.html)
 
-[浏览器缓存机制浅析](https://mp.weixin.qq.com/s?__biz=MzAxODE2MjM1MA==&mid=2651551769&idx=1&sn=3a422455b5cc240f8625842d31d81ab8&chksm=8025afd8b75226cec68e1e0e4b36334bb1d88e51a7fdba0cf7884d9f1d6597e4e4475cffaa38&scene=0&key=14dedca505cc3f43c6a4d233713db6622f46ef4cb8b38560a2d86c3125344594841f722c72f1c9440770400abeecd9f41d6f3ed4289683ee11923ba5ab54c5fedcd124869585d18c38bf21a28c6c8e71&ascene=0&uin=MzA3NDk0NjAw&devicetype=iMac+MacBookPro12%2C1+OSX+OSX+10.12.2+build(16C67)&version=12020010&nettype=WIFI&fontScale=100&pass_ticket=op6p%2FRIGPnVS0DbauBZRlcVPy964Xj6glTzdnemU7TgmVLrasHaK4vQt4OJECOMB)
+参考阅读：
 
-[浏览器 HTTP 协议缓存机制详解](http://www.cnblogs.com/520yang/articles/4807408.html)
-
-[浅谈Web缓存](http://web.jobbole.com/85243/)
-
-[作为前端应当了解的Web缓存知识](http://www.cnblogs.com/dojo-lzz/p/5515839.html)
+* [透过浏览器看HTTP缓存](http://www.cnblogs.com/skylar/p/browser-http-caching.html)
+* [浏览器缓存机制浅析](https://mp.weixin.qq.com/s?__biz=MzAxODE2MjM1MA==&mid=2651551769&idx=1&sn=3a422455b5cc240f8625842d31d81ab8&chksm=8025afd8b75226cec68e1e0e4b36334bb1d88e51a7fdba0cf7884d9f1d6597e4e4475cffaa38&scene=0&key=14dedca505cc3f43c6a4d233713db6622f46ef4cb8b38560a2d86c3125344594841f722c72f1c9440770400abeecd9f41d6f3ed4289683ee11923ba5ab54c5fedcd124869585d18c38bf21a28c6c8e71&ascene=0&uin=MzA3NDk0NjAw&devicetype=iMac+MacBookPro12%2C1+OSX+OSX+10.12.2+build(16C67)&version=12020010&nettype=WIFI&fontScale=100&pass_ticket=op6p%2FRIGPnVS0DbauBZRlcVPy964Xj6glTzdnemU7TgmVLrasHaK4vQt4OJECOMB)
+* [浏览器 HTTP 协议缓存机制详解](http://www.cnblogs.com/520yang/articles/4807408.html)
+* [浅谈Web缓存](http://web.jobbole.com/85243/)
+* [作为前端应当了解的Web缓存知识](http://www.cnblogs.com/dojo-lzz/p/5515839.html)
 
 
