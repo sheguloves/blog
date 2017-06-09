@@ -74,11 +74,11 @@ Unicode标准也在不断发展，但最常用的是用两个字节表示一个�
 
 用记事本编辑的时候，从文件读取的UTF-8字符被转换为Unicode字符到内存里，编辑完成后，保存的时候再把Unicode转换为UTF-8保存到文件：
 
-![code01](/img/code01.jpg "Unicode UTF-8")
+![code01](/img/code01.png "Unicode UTF-8")
 
 浏览网页的时候，服务器会把动态生成的Unicode内容转换为UTF-8再传输到浏览器：
 
-![code02](/img/code02.jpg "Unicode UTF-8")
+![code02](/img/code02.png "Unicode UTF-8")
 
 所以你看到很多网页的源码上会有类似`<meta charset="UTF-8" />`的信息，表示该网页正是用的UTF-8编码。
 
