@@ -1,8 +1,8 @@
 ---
 layout:     post
-title:      "读书笔记 - 02"
-subtitle:   "读Javascript经典面试笔记"
-date:       2017-03-08
+title:      "读书笔记 - 03"
+subtitle:   "学习python"
+date:       2017-06-09
 author:     "Felix Xi"
 header-img: "img/night.jpg"
 catalog: true
