@@ -15,3 +15,7 @@
 2. [读书笔记 - 简约至上](https://github.com/sheguloves/blog/issues/8)
 3. [读书笔记 - TCP协议](https://github.com/sheguloves/blog/issues/7)
 4. [读书笔记 - 深入了解ES6面向对象](https://github.com/sheguloves/blog/issues/3)
+
+## [JQuery](https://github.com/sheguloves/blog/labels/JQuery)
+1. [JQuery - Events](https://github.com/sheguloves/blog/issues/13)
+2. [JQuery - Traversing](https://github.com/sheguloves/blog/issues/12)
