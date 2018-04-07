@@ -19,3 +19,6 @@
 ## [JQuery](https://github.com/sheguloves/blog/labels/JQuery)
 1. [JQuery - Events](https://github.com/sheguloves/blog/issues/13)
 2. [JQuery - Traversing](https://github.com/sheguloves/blog/issues/12)
+
+## [Javscript](https://github.com/sheguloves/blog/labels/Javscript)
+1. [Javascript - Array](https://github.com/sheguloves/blog/issues/14)
