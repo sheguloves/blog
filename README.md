@@ -1,6 +1,9 @@
 # blog
 个人博客
 
+## [Vim](https://github.com/sheguloves/blog/labels/Vim)
+1. [Vim day 1](https://github.com/sheguloves/blog/issues/15)
+
 ## [Vue](https://github.com/sheguloves/blog/labels/VUE)
 1. [VUE2.0源码解读 01 - 数据双向绑定](https://github.com/sheguloves/blog/issues/10)
 2. [VUE2.0源码解读 02 - 异步更新](https://github.com/sheguloves/blog/issues/11)
