@@ -27,3 +27,4 @@
 1. [Javascript - Array](https://github.com/sheguloves/blog/issues/14)
 2. [内存管理](https://github.com/sheguloves/blog/issues/16)
 3. [Function 与 Eval](https://github.com/sheguloves/blog/issues/17)
+4. [Javascript中Bind()的使用](https://github.com/sheguloves/blog/issues/18)
