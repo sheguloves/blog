@@ -28,3 +28,4 @@
 2. [内存管理](https://github.com/sheguloves/blog/issues/16)
 3. [Function 与 Eval](https://github.com/sheguloves/blog/issues/17)
 4. [Javascript中Bind()的使用](https://github.com/sheguloves/blog/issues/18)
+4. [Javascript Promise](https://github.com/sheguloves/blog/issues/19)
