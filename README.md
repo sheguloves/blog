@@ -24,8 +24,8 @@
 2. [JQuery - Traversing](https://github.com/sheguloves/blog/issues/12)
 
 ## [Javscript](https://github.com/sheguloves/blog/labels/Javscript)
-1. [Javascript - Array](https://github.com/sheguloves/blog/issues/14)
-2. [内存管理](https://github.com/sheguloves/blog/issues/16)
-3. [Function 与 Eval](https://github.com/sheguloves/blog/issues/17)
-4. [Javascript中Bind()的使用](https://github.com/sheguloves/blog/issues/18)
-4. [Javascript Promise](https://github.com/sheguloves/blog/issues/19)
+1. [Javascript 基础之 Array](https://github.com/sheguloves/blog/issues/14)
+2. [Javascript 基础之 Memory Management](https://github.com/sheguloves/blog/issues/16)
+3. [Javascript 基础之 Function 与 Eval](https://github.com/sheguloves/blog/issues/17)
+4. [Javascript 基础知 Bind](https://github.com/sheguloves/blog/issues/18)
+4. [Javascript 基础之 Promise](https://github.com/sheguloves/blog/issues/19)
