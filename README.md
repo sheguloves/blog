@@ -1,8 +1,12 @@
 # blog
-个人博客
 
-## [Vim](https://github.com/sheguloves/blog/labels/Vim)
-1. [Vim day 1](https://github.com/sheguloves/blog/issues/15)
+## [Javscript](https://github.com/sheguloves/blog/labels/Javscript)
+1. [Javascript 基础之 Array](https://github.com/sheguloves/blog/issues/14)
+2. [Javascript 基础之 Memory Management](https://github.com/sheguloves/blog/issues/16)
+3. [Javascript 基础之 Function 与 Eval](https://github.com/sheguloves/blog/issues/17)
+4. [Javascript 基础知 Bind](https://github.com/sheguloves/blog/issues/18)
+4. [Javascript 基础之 Promise](https://github.com/sheguloves/blog/issues/19)
+5. [Javascript 基础之 History](https://github.com/sheguloves/blog/issues/20)
 
 ## [Vue](https://github.com/sheguloves/blog/labels/VUE)
 1. [VUE2.0源码解读 01 - 数据双向绑定](https://github.com/sheguloves/blog/issues/10)
@@ -23,9 +27,6 @@
 1. [JQuery - Events](https://github.com/sheguloves/blog/issues/13)
 2. [JQuery - Traversing](https://github.com/sheguloves/blog/issues/12)
 
-## [Javscript](https://github.com/sheguloves/blog/labels/Javscript)
-1. [Javascript 基础之 Array](https://github.com/sheguloves/blog/issues/14)
-2. [Javascript 基础之 Memory Management](https://github.com/sheguloves/blog/issues/16)
-3. [Javascript 基础之 Function 与 Eval](https://github.com/sheguloves/blog/issues/17)
-4. [Javascript 基础知 Bind](https://github.com/sheguloves/blog/issues/18)
-4. [Javascript 基础之 Promise](https://github.com/sheguloves/blog/issues/19)
+
+## [Vim](https://github.com/sheguloves/blog/labels/Vim)
+1. [Vim day 1](https://github.com/sheguloves/blog/issues/15)
