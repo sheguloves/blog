@@ -1,6 +1,6 @@
 # blog
 
-## [Javscript](https://github.com/sheguloves/blog/labels/Javscript基础)
+## [Javscript 基础](https://github.com/sheguloves/blog/labels/Javscript%20%E5%9F%BA%E7%A1%80)
 1. [Javascript 基础之 Array](https://github.com/sheguloves/blog/issues/14)
 2. [Javascript 基础之 Memory Management](https://github.com/sheguloves/blog/issues/16)
 3. [Javascript 基础之 Function 与 Eval](https://github.com/sheguloves/blog/issues/17)
